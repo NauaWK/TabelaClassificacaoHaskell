@@ -1,7 +1,7 @@
 module Main where
 
-import Src.Tipos
-import Src.Dados ( dadosCampeonato )
+import PJBL2.Src.Tipos
+import PJBL2.Src.Dados ( dadosCampeonato )
 
 main :: IO ()
 main = do

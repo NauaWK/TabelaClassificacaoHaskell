@@ -2,6 +2,7 @@ module Main where
 
 import Src.Tipos
 import Src.Dados
+import Src.Classificacao
 import Data.List (nub, sort)
 
 verificar :: String -> Bool -> IO() -- funcao auxiliar para mostrar se um determinado teste passou
@@ -87,8 +88,17 @@ main = do
     testeResultadoPara
     testeTimes
     
-    putStrLn("\n ===== TESTES DO CAMPEONATO =====\n")
+    putStrLn("\n===== TESTES DO CAMPEONATO =====\n")
     testeEstruturaCampeonato
     testeEmpateSemGols
     testeGoleada
     testeConflitosRodada
+
+    putStrLn("\n===== TESTE LISTAGEM RODADAS (ATE RODADA 3) =====\n")
+    print(ateRodada 3 dadosCampeonato)
+
+    putStrLn("\n===== TESTE LINHA DO TIME NA CLASSIFICACAO =====\n")
+    print(linhaDoTime dadosCampeonato "Aurora")
+
+    putStrLn("\n===== TESTE TABELA CLASSIFICACAO =====\n")
+    print(classificacao dadosCampeonato)

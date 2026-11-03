@@ -1,7 +1,6 @@
 module Src.Tipos where
 
 import Data.List (nub, sort)
-import Data.Ord (comparing, Down)
 
 type Time = String
 
